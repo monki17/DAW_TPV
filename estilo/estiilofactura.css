@@ -1,0 +1,26 @@
+
+div.clear{
+	clear:both;
+}
+h1{
+	margin:5px 0;
+}
+
+#cuenta{
+	position:relative;
+	border:1px solid;
+	background-color:#90bade;
+	padding:1px;
+	padding-top:1px;
+	width:30%;
+	height:auto;
+	float:left;
+	
+	margin-bottom:5px;
+	
+		box-shadow: 0 0 0.5em blue;
+  border-radius:10px;
+	
+}
+
+
