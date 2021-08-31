@@ -1,7 +1,7 @@
 <?php 
   session_start(); 
  include("funciones.php");
- 
+  echo "Hola";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/
 xhtml1/DTD/xhtml1-transitional.dtd">
@@ -18,7 +18,7 @@ xhtml1/DTD/xhtml1-transitional.dtd">
 if($_SESSION['Siniciada']=='si'&& empty($_SESSION['pido'])==false){
 	echo '<h1> Frijolito</h1>
 	Cif:168786348L<br>
-	C/desengaño 21, 42001,Soria<br>
+	C/desengaï¿½o 21, 42001,Soria<br>
 	Tel:(+34)975123456<br>';
 echo'Le atendio: '.$_SESSION['SCamarero'];
 
@@ -26,7 +26,7 @@ echo'Le atendio: '.$_SESSION['SCamarero'];
 	$orden='SELECT nuevafactura('.$_SESSION['cod_camarero'].');';
 	$consulta=mysql_query($orden);
 	$r1=mysql_fetch_array($consulta);
-	echo '   Nº factura: '.$r1[0].'<br>';
+	echo '   Nï¿½ factura: '.$r1[0].'<br>';
 	
 	//muestra de lo pedido
 	echo '<table style="position:relative; top:2px" >
@@ -41,7 +41,7 @@ echo'Le atendio: '.$_SESSION['SCamarero'];
 					echo '<tr style="border-bottom: 1px solid blue">
 							<td style="border-bottom: 1px solid blue" >'.strtolower($c['articulo']).'</td>
 							<td style="border-bottom: 1px solid blue" align="center">'.$c['cantidad'].'</td>
-							<td style="border-bottom: 1px solid blue; " align="right">'.number_format($c['precio'], 2, '.', ' ').'€</td>
+							<td style="border-bottom: 1px solid blue; " align="right">'.number_format($c['precio'], 2, '.', ' ').'ï¿½</td>
 							
 						</tr>';
 						
@@ -61,7 +61,7 @@ echo'Le atendio: '.$_SESSION['SCamarero'];
 	}
 	
 	
-	echo '<h2> Total:'.number_format($total, 2, '.', ' ').'€</h2>';
+	echo '<h2> Total:'.number_format($total, 2, '.', ' ').'ï¿½</h2>';
 	echo ' IVA incluido<br>';
 	echo ' Gracias por su compra :)';
 	unset($_SESSION['pido']);
